@@ -1,0 +1,191 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Matt Moats} \\ \vspace{1pt}
+    \small 425-315-3886 $|$ \href{mailto:x@x.com}{\underline{Moatsmjl@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/...}{\underline{www.linkedin.com/in/matt-moats/}} 
+\end{center}
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Technical Project Manager}{August 2022 -- April 2023}
+      {Amazon Web Services}{Seattle, WA}
+      \resumeItemListStart
+        \resumeItem{Ran a region build coordination program for three software teams, orchestrating presence in a growing number of new regions (datacenters) every year. My role was to create tasks, modify build models, schedule, prioritize, and monitor and report on region builds in flight. Established the first central tracking documentation for each team, revised build models for efficiency, saving weeks of downtime per build, and tens of thousands in idle capacity.}
+      \resumeItemListEnd
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    \resumeSubheading
+      {Systems Development Engineer II}{June, 2016 -- July 2022}
+      {Amazon Web Services, Amazon.com}{Seattle, WA}
+      \resumeItemListStart
+        \resumeItem{Managed numerous projects including an automation and efficiency program which saved idle and "zombie" capacity saving 2.3 million dollars in annual billing, and freeing up multiple petabytes of customer storage for S3.}
+        \resumeItem{Performed a full overhaul of ticketing toward our team, reducing incoming sev-2 (high severity pages) counts by nearly 20\%}
+        \resumeItem{Started a program for closures of Seattle-based data centers that are in a limbo state. This program is still in operation today, and due to the scope and nature has been adopted by principle project managers.}
+        \resumeItem{Maintained and improved (automated) patching efforts on a fleet of 2700+ bare-metal hosts across three production teams, including the second largest production relational database in the whole of amazon. This ensured timely remediation of CVEs and reduced exposure on some of AWS's most critical infrastructure.}
+        \resumeItem{For AWS Cryptography, completely rebuilt the problematic reporting and monitoring dashboards. Also created templates for adaptation of future regions, partitions and new service metrics into the dashboard. Centralized repository for all internal documentation, and presented the new services to the delight of VPs in the org.}
+        \resumeItem{Also for AWS cryptography, migrated the in-house bare-metal MySQL database to AWS Aurora on RDS. This was done as a production database with no downtime.}
+        \resumeItem{My wide breadth of knowledge introduced similar responsibilities on AWS teams. I handled everything from support work, to program management, security risks, threat mitigation, disaster recovery, expansion, program deprecation, training, and more. I became an SME in every team i was in, as i touched almost everything. }
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Systems Development Engineer I}{August 2014 -- June 2016}
+      {Amazon.com}{Seattle, WA}
+      \resumeItemListStart
+        \resumeItem{As a member of the Fatals team, I created the "Sorry Report", which reported on major fatal error events (known as the "sorry" pages on amazon.com) on retail websites across the globe. This went directly to VP level management, and coordinated efforts from SDMs to directors. This got me used to reporting on a 48 hour cadence with senior leadership in high impact, time-sensitive applications}
+        \resumeItem{Coordinated efforts with Edge networking teams to ward off active attacks against amazon websites and network infrastructure.}
+        \resumeItem{Developed greasemonkey scripts used by all amazonians to focus on problematic deployments and assist in speed of recovery for rollbacks}
+        \resumeItem{Created the first focused reporting on Javascript errors on Amazon websites}
+        \resumeItem{Wrote and presented on executive communication, highlighting the methods I used to report to executive leadership on a near-daily basis. Providing lessons to engineers on effective writing and communication useful Amazon-wide. }
+      \resumeItemListEnd
+
+       \resumeSubheading
+      {Support engineer III}{September 2012 -- August 2014}
+      {Amazon.com}{Seattle, WA}
+      \resumeItemListStart
+        \resumeItem{As a member of TechOPS (TOS), managed high-severity conference calls for all of amazon. This included leading calls of 200+ participants, and driving highly impactful events to a quick resolution.}
+        \resumeItem{Coordinated with customer facing teams on AWS dashboard event reporting.}
+        \resumeItem{Completed a project to re-organize Amazon's response engagement structure to engage teams in a more targeted fashion. This reduced the average number of call participants from 180 to 25. It also ensured that the right people were contacted first, more often, leading to an 8\% MTTR improvement}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, C, SQL, JavaScript, HTML/CSS, Perl} \\
+     \textbf{Skillsets}{: Project Management, Program Management, Accessibility, Systems Design, Networking, Distributed Systems, Security, Monitoring, Governance, Risk, Compliance, Vulnerability Remediation, Operations Management, Linux, Windows} \\
+     \textbf{Developer Tools}{: Git, Docker, AWS, VS Code, Jetbrains suite} \\
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
